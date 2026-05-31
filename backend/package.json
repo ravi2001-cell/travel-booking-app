@@ -1,0 +1,14 @@
+{
+  "name": "travel-booking-backend",
+  "version": "1.0.0",
+  "description": "Unified Multi-Transport Backend Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.7"
+  }
+}
