@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One Global Travel Booking Portal</title>
+    <style>
+        :root { --brand-color: #2563eb; --accent-success: #16a34a; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f8fafc; margin: 0; padding: 20px; }
+        .app-wrapper { max-width: 900px; margin: 0 auto; }
+        .hero-banner { background: var(--brand-color); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+        .transport-nav { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
+        .nav-btn { background: white; border: 2px solid #e2e8f0; border-radius: 8px; padding: 12px; font-weight: bold; cursor: pointer; transition: all 0.2s; }
+        .nav-btn:hover, .nav-btn.active { background: var(--brand-color); color: white; border-color: var(--brand-color); }
+        .results-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .ticket-card { background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .book-btn { background: var(--accent-success); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="app-wrapper">
+    <div class="hero-banner">
+        <h1>RoamGlobal Transit Portal</h1>
+        <p>Book flights, trains, buses, short-term cars, taxis, and city micro-mobility options instantly.</p>
+    </div>
+
+    <!-- Mode Selector Navigation Bar -->
+    <div class="transport-nav">
+        <button class="nav-btn active" onclick="switchCategory('flight', this)">✈️ Flights</button>
+        <button class="nav-btn" onclick="switchCategory('train', this)">🚄 Trains</button>
+        <button class="nav-btn" onclick="switchCategory('bus', this)">🚌 Buses</button>
+        <button class="nav-btn" onclick="switchCategory('car', this)">🚗 Cars</button>
+        <button class="nav-btn" onclick="switchCategory('taxi', this)">🚕 Taxis</button>
+        <button class="nav-btn" onclick="switchCategory('bike', this)">🚲 Bikes</button>
+        <button class="nav-btn" onclick="switchCategory('ecycle', this)">⚡ eCycles</button>
+    </div>
+
+    <!-- Result Target Arena -->
+    <h2>Available Options</h2>
+    <div id="resultsEngine" class="results-grid"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
